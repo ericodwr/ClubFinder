@@ -1,12 +1,12 @@
 class ClubItem extends HTMLElement {
   constructor() {
-    super()
-    this.shadowDom = this.attachShadow({mode:"open"})
+    super();
+    this.shadowDom = this.attachShadow({ mode: 'open' });
   }
 
   set club(club) {
-    this._club = club
-    this.render()
+    this._club = club;
+    this.render();
   }
 
   render() {
@@ -26,11 +26,17 @@ class ClubItem extends HTMLElement {
         }
       
         .fan-art-club {
+            margin-top:2rem;
             width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            object-position: center;
+            height: 300px;
+            display:flex;
+            justify-content:center;
         }
+        img {
+          width:auto;
+          height:auto;
+        }
+
       
         .club-info {
             padding: 24px;
@@ -49,14 +55,15 @@ class ClubItem extends HTMLElement {
             -webkit-line-clamp: 10; /* number of lines to show */
         }
       </style>
-      <img class="fan-art-club" src="${this._club.strTeamBadge}" alt="Fan Art">
+      <div class="fan-art-club">
+      <img  src="${this._club.strTeamBadge}" alt="Fan Art">
+      </div>
            <div class="club-info">
                <h2>${this._club.strTeam}</h2>
                <p>${this._club.strDescriptionEN}</p>
            </div>;
-    `
-
+    `;
   }
 }
 
-customElements.define('club-item', ClubItem)
+customElements.define('club-item', ClubItem);
