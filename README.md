@@ -1,5 +1,5 @@
-## ClubFinder
-# From Dicoding Indonesia's Courses
+# ClubFinder
+## From Dicoding Indonesia's Courses
 
 
 Find ur favorite football clubs in this website  
